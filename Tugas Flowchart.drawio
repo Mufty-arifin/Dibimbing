@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-08-14T08:40:08.299Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="ZK1bwWT9U6THTHwAgZYm" version="21.6.8" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2023-08-14T08:48:32.737Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="ROsdiyKotJqOC04VLYOY" version="21.6.8" type="github" pages="5">
   <diagram name="1. Menghitung luas segitiga" id="02AUiCBUXTpu5wbuscKD">
     <mxGraphModel dx="794" dy="502" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -353,7 +353,7 @@
         <mxCell id="R1DS7K5mihkbaJbZH5tn-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="R1DS7K5mihkbaJbZH5tn-7" target="R1DS7K5mihkbaJbZH5tn-11">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="R1DS7K5mihkbaJbZH5tn-14" value="else" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="R1DS7K5mihkbaJbZH5tn-13">
+        <mxCell id="R1DS7K5mihkbaJbZH5tn-14" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="R1DS7K5mihkbaJbZH5tn-13">
           <mxGeometry x="0.04" y="3" relative="1" as="geometry">
             <mxPoint x="6" y="12" as="offset" />
           </mxGeometry>
@@ -393,7 +393,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="R1DS7K5mihkbaJbZH5tn-24" value="else" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="R1DS7K5mihkbaJbZH5tn-22">
+        <mxCell id="R1DS7K5mihkbaJbZH5tn-24" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="R1DS7K5mihkbaJbZH5tn-22">
           <mxGeometry x="-0.1671" y="-1" relative="1" as="geometry">
             <mxPoint x="19" y="-26" as="offset" />
           </mxGeometry>
