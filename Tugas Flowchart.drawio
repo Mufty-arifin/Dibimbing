@@ -1,5 +1,5 @@
-<mxfile host="app.diagrams.net" modified="2023-08-14T08:38:07.747Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="1HssvUu2XTIN6HBjBlmU" version="21.6.8" type="github" pages="5">
-  <diagram name="menghitung luas segitiga" id="02AUiCBUXTpu5wbuscKD">
+<mxfile host="app.diagrams.net" modified="2023-08-14T08:40:08.299Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="ZK1bwWT9U6THTHwAgZYm" version="21.6.8" type="github" pages="5">
+  <diagram name="1. Menghitung luas segitiga" id="02AUiCBUXTpu5wbuscKD">
     <mxGraphModel dx="794" dy="502" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
@@ -40,7 +40,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="8VTxvFwr_7CSF54wP58C" name="Memeriksa tahun kabisat">
+  <diagram id="8VTxvFwr_7CSF54wP58C" name="2. Memeriksa tahun kabisat">
     <mxGraphModel dx="794" dy="502" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
@@ -99,7 +99,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="Jne6avahhgXd1REMLqCU" name="mencari nilai maksimum dari tiga bilangan.">
+  <diagram id="Jne6avahhgXd1REMLqCU" name="3. Mencari nilai maksimum dari tiga bilangan.">
     <mxGraphModel dx="794" dy="502" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
@@ -193,7 +193,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="m0BaogjLjCuBq9SJ7uEn" name="menghitung faktorial suatu bilangan.">
+  <diagram id="m0BaogjLjCuBq9SJ7uEn" name="4. Menghitung faktorial suatu bilangan.">
     <mxGraphModel dx="794" dy="502" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
@@ -305,7 +305,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="8qfBZJlG48gqhI8ujY1m" name="mengganti semua huruf vokal dalam sebuah string dengan tanda &quot;_&quot;.">
+  <diagram id="8qfBZJlG48gqhI8ujY1m" name="5. Mengganti semua huruf vokal dalam sebuah string dengan tanda &quot;_&quot;.">
     <mxGraphModel dx="794" dy="502" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
