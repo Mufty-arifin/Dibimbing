@@ -1,13 +1,24 @@
 
 Yang perlu dijelaskan
 - jelaskan array, string, object bisa diapain aja! cari di w3school
+Jawaban
+1. struktur data yang digunakan untuk menyimpan sekumpulan data dalam satu tempat.
+2. object adalah struktur data yang memungkinkan Anda menyimpan dan mengatur data dalam bentuk pasangan key-value.
+3. kumpulan karakter yang membentuk teks. Karakter dalam string bisa berupa huruf, angka, atau simbol lainnya
 - jelaskan array
 	- akses property
+	untuk mengakses property menggunakan indeks
 	- akses property banyak => makanya butuh looping
 - jelaskan looping
+Jawaban
+Loop adalah teknik untuk mengeksekusi kumpulan coding secara berulang-ulang
 - jelaskan function
+function adalah blok kode yang dapat dieksekusi secara berulang dengan cara memanggil nama fungsinya. 
 	- untuk apa?
+	agar penulisan kode atau proses yang sama tidak ditulis secara berulang kali.
 	- apa itu function param
+param adalah nilai yang dapat diterima oleh fungsi saat dipanggil.
    	- apa itu function return
+	return adalah untuk mengembalikan nilai
 - jelaskan object
 	-akses property

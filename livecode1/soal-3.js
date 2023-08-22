@@ -9,7 +9,7 @@ const filterData = (arr, searchValue) => {
   let result = []
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] === searchValue) {
-      result.push(searchValue)
+      result.push(arr[i])
     }
     
   }

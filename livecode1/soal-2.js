@@ -16,8 +16,18 @@
 const countManual = (arr) => {
   // tulis code di sini
   let count = 0
-  for (let i = 0; arr[i] !== undefined; i++) {
-      count++;
+  // for (let i = 0; i >= 0; i++) {
+  //   if (arr[i] === undefined) {
+  //     break;
+  //   }  
+  //   count++;
+  // }
+let i = 0;
+  while (i >= 0) {
+    if (arr[i] === undefined) {
+      break;
+    }  
+    count++;
   }
   return count;
 }
