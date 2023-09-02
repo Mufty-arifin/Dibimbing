@@ -1,21 +1,23 @@
-
-
 //Class
-class Person{
-    constructor(name, age){
-        this.name = name;
-        this.age = age;
-    }
+// class Person{
+//     constructor(name, age){
+//         this.name = name;
+//         this.age = age;
+//     }
 
-    greet(){
-        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
-    }
-}
-const person1 = new Person("Alice", 25);
-const person2 = new Person("Bob", 30);
+//     greet(){
+//         let result = `Hello, my name is ${this.name} and I am ${this.age} years old.`
 
-person1.greet();
-person2.greet();
+//     return result
+//     }
+// }
+// const person1 = new Person("Alice", 25).greet();
+// const person2 = new Person("Bob", 30);
+
+// // person1.greet();
+// person2.greet();
+
+// console.log("class", person1);
 
 /*
 
@@ -27,69 +29,68 @@ OOP Concepts
 
 */
 
-class Animal {
-    constructor(name){
-        this.name = name;
-    }
-    
-    speak(){
-        console.log(`${this.name} mengeluarkan suara.`);
-    }
-}
-// Inheritance
-class Dog extends Animal {
-    speak(){
-        console.log(`${this.name} menggonggong: Woof! Woof!`);
-    }
-}
+// class Animal {
+//   constructor(name) {
+//     this.name = name;
+//   }
 
-class Cat extends Animal{
-    speak(){
-        console.log(`${this.name} mengeong: Meow! Meow!`);
-    }
-}
+//   speak() {
+//     console.log(`${this.name} mengeluarkan suara.`);
+//   }
+// }
+// // Inheritance
+// class Dog extends Animal {
+//   a() {
+//     console.log(`${this.name} menggonggong: Woof! Woof!`);
+//   }
+// }
 
-const dog = new Dog("Buddy");
-const cat = new Cat("Kitty");
+// class Cat extends Animal {
+//   speak() {
+//     console.log(`${this.name} mengeong: Meow! Meow!`);
+//   }
+// }
 
-dog.speak();
-cat.speak();
+// const dog = new Dog("Buddy");
+// const cat = new Cat("Kitty");
 
+// dog.speak();
+// cat.speak();
 
 //Polymophism
 
-class Shape {
-    area(){
-        return 0;
-    }
-}
+// class Shape {
+//   area() {
+//     return 0;
+//   }
+// }
 
-class Circle extends Shape {
-    constructor(radius){
-        super();
-        this.radius = radius;
-    }
-    area() {
-        return Math.PI * this.radius * this.radius;
-    }
-}
+// class Circle extends Shape {
+//   constructor(radius) {
+//     super();
+//     this.radius = radius;
+//   }
+//   area() {
+//     return Math.PI * this.radius * this.radius;
+//   }
+// }
 
-class Rectangle extends Shape {
-    constructor(width, height) {
-        super();
-        this.width = width;
-        this.height = height;
-    }
-    area(){
-        return this.width * this.height;
-    }
-}
+// class Rectangle extends Shape {
+//   constructor(width, height) {
+//     super();
+//     this.width = width;
+//     this.height = height;
+//   }
+//   area() {
+//     return this.width * this.height;
+//   }
+// }
 
-const shapes = [new Circle(5), new Rectangle(4, 6)];
+// const shapes = [new Circle(5), new Rectangle(4, 6)];
 
-shapes.forEach((shape) =>{
-    console.log(`Area of shapes: ${Math.floor(shape.area())}`);
-});
+// shapes.forEach((shape) => {
+//   console.log(`Area of shapes: ${Math.floor(shape.area())}`);
+// });
 
 // encapsulation
 
@@ -134,36 +135,36 @@ account.withdraw(200);
 
 // abastraction
 
-class Vehicle{
-    constructor(name){
-        this.name = name;
-    }
+class Vehicle {
+  constructor(name) {
+    this.name = name;
+  }
 
-    start() {
-        throw new Error("This method should be overridden.");
-    }
+  start() {
+    throw new Error("This method should be overridden.");
+  }
 
-    stop(){
-        throw new Error("This method should be overridden.");
-    }
+  stop() {
+    throw new Error("This method should be overridden.");
+  }
 }
 
 class Car extends Vehicle {
-    start() {
-        console.log(`${this.name} engine started.`);
-    }
-    stop() {
-        console.log(`${this.name} engine stopped.`);
-    }
-} 
+  start() {
+    console.log(`${this.name} engine started.`);
+  }
+  stop() {
+    console.log(`${this.name} engine stopped.`);
+  }
+}
 
 class Bicycle extends Vehicle {
-    start() {
-        console.log(`${this.name} pedaling...`);
-    }
-    stop() {
-        console.log(`${this.name} stopped pedaling.`);
-    }
+  start() {
+    console.log(`${this.name} pedaling...`);
+  }
+  stop() {
+    console.log(`${this.name} stopped pedaling.`);
+  }
 }
 
 const car = new Car("BMW");
@@ -174,3 +175,23 @@ car.stop();
 
 bicycle.start();
 bicycle.stop();
+
+// class Kalkulator {
+//   constructor(bil1, bil2) {
+//     this.bil1 = bil1;
+//     this.bil2 = bil2;
+//   }
+//   perkalian() {
+//     console.log(this.bil1 * this.bil2);
+//     // return this.bil1 * this.bil2;
+//   }
+//   pengurangan() {
+//     console.log(this.bil1 - this.bil2);
+//     // return this.bil1 - this.bil2;
+//   }
+// }
+// const perhitungan1 = new Kalkulator(20, 9);
+
+// perhitungan1.pengurangan();
+// perhitungan1.perkalian();
+
