@@ -18,13 +18,32 @@ untuk contoh inputan dan keluaran bisa dilihat Test Case dibawah
 
 function deepSum(arr) {
   // Code disini
-  let count = 0
-for (const i of arr) {
-    for (const j of i) {
-        console.log(j);
+  if (arr.length === 0) {
+    return "No number";
+  }
+
+  let totalIndeks = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      const nestedSum = deepSum(arr[i]);
+      if (nestedSum !== "No number") {
+        totalIndeks += nestedSum;
+      } else {
+        return "No number";
+      }
+    } else {
+      if (typeof arr[i] === 'number') {
+        totalIndeks += arr[i];
+      } else {
+        return "No number";
+      }
     }
+  }
+
+  return totalIndeks;
 }
-}
+
+
 
 //TEST CASE
 console.log(
@@ -65,3 +84,4 @@ console.log(
 ); // 92
 
 console.log(deepSum([])); // No number
+console.log(deepSum([[]])); //  No number
