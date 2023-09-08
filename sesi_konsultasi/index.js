@@ -26,7 +26,6 @@
 
 // cetakData("mufty", "laki-laki", 25, "cianjur", "mahasiswa");
 
-
 //spread Operator
 
 const obj1 = { judul: "naruto", genre: "aksi", tahun: 1900 };
@@ -45,36 +44,28 @@ const komik = merge(obj1, obj2, obj3);
 const judulArray = [];
 
 for (const key in result) {
-      if (result.hasOwnProperty(key)) {
-            judulArray.push(result[key].judul);
-          }
-        }
-        console.log(judulArray);
-        
+  if (result.hasOwnProperty(key)) {
+    judulArray.push(result[key].judul);
+  }
+}
+console.log(judulArray);
+
 //mengurutkan berdasarkan tahun
 const dataArray = Object.values(komik);
 for (let i = 0; i < dataArray.length - 1; i++) {
-    for (let j = 0; j < dataArray.length - i - 1; j++) {
-      if (dataArray[j].tahun > dataArray[j + 1].tahun) {
-        // Menukar posisi elemen jika tahunnya lebih besar
-        const temp = dataArray[j];
-        dataArray[j] = dataArray[j + 1];
-        dataArray[j + 1] = temp;
-      }
+  for (let j = 0; j < dataArray.length - i - 1; j++) {
+    if (dataArray[j].tahun > dataArray[j + 1].tahun) {
+      // Menukar posisi elemen jika tahunnya lebih besar
+      const temp = dataArray[j];
+      dataArray[j] = dataArray[j + 1];
+      dataArray[j + 1] = temp;
     }
   }
+}
 
-  const result = {};
+const result = {};
 for (let i = 0; i < dataArray.length; i++) {
   result[i] = dataArray[i];
 }
 
 console.log(result);
-
-
-
-
-
-
-
-
