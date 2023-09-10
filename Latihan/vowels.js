@@ -31,3 +31,38 @@ function countVowels(str, vowels) {
 
 console.log(countVowels("Selamat Pagi Duniaa!!", vowels));
 console.log(countVowels("Aku suka ngoding", vowels));
+//7
+function vowelsAndConsonants(s) {
+  const vowels = 'aeiou';
+  let vowelString = '';
+  let consonantString = '';
+
+  for (let i = 0; i < s.length; i++) {
+    if (vowels.includes(s[i])) {
+      vowelString += s[i];
+    } else {
+      consonantString += s[i];
+    }
+  }
+
+  return vowelString + consonantString;
+}
+
+console.log(vowelsAndConsonants("javascriptloops"));
+/**
+a
+a
+i
+o
+o
+j
+v
+s
+c
+r
+p
+t
+l
+p
+s  
+*/ 

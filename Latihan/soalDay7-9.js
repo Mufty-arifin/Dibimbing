@@ -108,15 +108,23 @@ function searchLike(data, keyword) {
   const result = [];
 
   for (let i = 0; i < data.length; i++) {
-    let match = true;
-    for (let j = 0; j < keyword.length; j++) {
-      if (data[i][j] !== keyword[j]) {
-        match = false;
-        break;
+    const element = data[i];
+    let keywordIndex = 0;
+    let match = false;
+
+    for (let i = 0; i < element.length; i++) {
+      if (element[i] === keyword[keywordIndex]) {
+        keywordIndex++;
+        if (keywordIndex === keyword.length) {
+          match = true;
+        }
+      } else {
+        keywordIndex = 0;
       }
     }
+
     if (match) {
-        result.push(data[i])
+      result.push(element);
     }
   }
 
@@ -152,6 +160,23 @@ console.log(searchLike(["nababan", "gaban", "ban", "nabab"], "naban")); // []
 
 function graduates(students) {
   // Code disini
+  let outputStudent = {};
+
+  for (let i = 0; i < students.length; i++) {
+    //console.log(students[i]);
+    let student = students[i];
+    if (student.score >= 75) {
+      if (!outputStudent[student.class]) {
+        outputStudent[student.class] = [];
+      }
+      outputStudent[student.class].push({
+        name: student.name,
+        score: student.score,
+      });
+    }
+  }
+
+  return outputStudent;
 }
 
 //  TEST CASE
@@ -363,6 +388,38 @@ console.log(shoppingTime()); ////Mohon maaf, toko X hanya berlaku untuk member s
 
 function getGuildMemberInfo(members) {
   // your code here
+  if (members.length === 0) {
+    return "invalid data";
+  }
+  // Initialize variables to store guild member information
+  let outputMembers = {
+    totalMember: members.length,
+    averageLevel: 0,
+  };
+  let classInfo = {};
+
+  // Calculate the average level and group members by class
+  for (let i = 0; i < members.length; i++) {
+    const member = members[i];
+    const { name, level, class: className } = member;
+
+    // Update the average level
+    outputMembers.averageLevel += level;
+
+    // Group members by class
+    if (className) {
+      if (!classInfo[className]) {
+        classInfo[className] = [];
+      }
+      classInfo[className].push({ name, level });
+    }
+  }
+
+  outputMembers.averageLevel /= members.length;
+
+  outputMembers = { ...outputMembers, ...classInfo };
+
+  return outputMembers;
 }
 
 // //]));
