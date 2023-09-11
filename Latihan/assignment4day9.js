@@ -1,4 +1,4 @@
-// SOAL 1 ———————————————————————
+// SOAL 1
 /* 
 ===========
 Deep Sum
@@ -70,7 +70,7 @@ console.log(
 ); // 92
 
 console.log(deepSum([])); // No number
-// SOAL 2 ———————————————————————
+// SOAL 2
 /* 
   ===========
   Search Like
@@ -138,7 +138,7 @@ console.log(searchLike(["nababan", "gaban", "ban", "nabab"], "naban")); // []
 
 // */
 
-// SOAL 3 ———————————————————————
+// SOAL 3
 /* 
   ===========
   Graduates
@@ -260,7 +260,7 @@ console.log(
 
 console.log(graduates([])); //{}
 
-// SOAL 4 ———————————————————————
+// SOAL 4 
 /* 
   ===========
   Shopping Time
@@ -299,6 +299,34 @@ console.log(graduates([])); //{}
   */
 function shoppingTime(memberId, money) {
   // you can only write your code here!
+  const priceList = [
+    ["Sepatu Stacattu", 1500000],
+    ["Baju Zoro", 500000],
+    ["Baju H&N", 250000],
+    ["Sweater Uniklooh", 175000],
+    ["Casing Handphone", 50000],
+  ];
+  if (!memberId) {
+    return "Mohon maaf, toko X hanya berlaku untuk member saja";
+  }
+  if (money < 50000) {
+    return "Mohon maaf, uang tidak cukup";
+  }
+  const result = {
+    memberId: memberId,
+    money: money,
+    listPurchased: [],
+    changeMoney: 0,
+  };
+  for (let i = 0; i < priceList.length; i++) {
+    if (money >= priceList[i][1]) {
+      result.listPurchased.push(priceList[i][0]);
+      money -= priceList[i][1];
+    }
+  }
+  result.changeMoney = money;
+
+  return result;
 }
 // TEST CASES
 console.log(shoppingTime("1820RzKrnWn08", 2475000));
@@ -321,7 +349,7 @@ console.log(shoppingTime("", 2475000)); //Mohon maaf, toko X hanya berlaku untuk
 console.log(shoppingTime("234JdhweRxa53", 15000)); // Mohon maaf, uang tidak cukup
 console.log(shoppingTime()); ////Mohon maaf, toko X hanya berlaku untuk member saja
 
-// SOAL 5 ———————————————————————
+// SOAL 5
 /**
   ===========
   Shopping Time
@@ -391,38 +419,83 @@ function getGuildMemberInfo(members) {
   if (members.length === 0) {
     return "invalid data";
   }
-  // Initialize variables to store guild member information
-  let outputMembers = {
-    totalMember: members.length,
-    averageLevel: 0,
-  };
-  let classInfo = {};
 
-  // Calculate the average level and group members by class
+  // Initialize variables to store total level and class counts
+  let totalLevel = 0;
+  let classCounts = {};
+
+  // Iterate through the members array
   for (let i = 0; i < members.length; i++) {
     const member = members[i];
-    const { name, level, class: className } = member;
 
-    // Update the average level
-    outputMembers.averageLevel += level;
+    // Check if member has a valid level
+    if (typeof member.level === "number") {
+      // Calculate total level
+      totalLevel += member.level;
+    }
 
-    // Group members by class
-    if (className) {
-      if (!classInfo[className]) {
-        classInfo[className] = [];
+    // Count members per class
+    if (typeof member.class === "string") {
+      if (classCounts[member.class]) {
+        classCounts[member.class]++;
+      } else {
+        classCounts[member.class] = 1;
       }
-      classInfo[className].push({ name, level });
     }
   }
 
-  outputMembers.averageLevel /= members.length;
+  // Calculate average level
+  const totalMembers = members.length;
+  const averageLevel = Math.floor(totalLevel / totalMembers);
 
-  outputMembers = { ...outputMembers, ...classInfo };
+  // Initialize an object to store top members per class
+  const topMembers = {};
 
-  return outputMembers;
+  // Iterate through the members array again to find top members
+  for (let i = 0; i < members.length; i++) {
+    const member = members[i];
+
+    if (
+      typeof member.level === "number" &&
+      typeof member.class === "string" &&
+      member.level >= averageLevel
+    ) {
+      if (!topMembers[member.class]) {
+        topMembers[member.class] = [];
+      }
+      topMembers[member.class].push({ name: member.name, level: member.level });
+    }
+  }
+
+  // Create an object to store the final result
+  const guildInfo = {
+    totalMember: totalMembers,
+    averageLevel: averageLevel,
+  };
+
+  // Add topMembers properties manually
+  for (const className in topMembers) {
+    if (topMembers.hasOwnProperty(className)) {
+      guildInfo[className] = topMembers[className];
+    }
+  }
+
+  return guildInfo;
 }
 
 // //]));
+console.log(
+  getGuildMemberInfo([
+    { name: "cecile", level: 99, class: "Knight" },
+    { name: "goblin", level: 95, class: "Knight" },
+    { name: "bearus", level: 88, class: "Knight" },
+    { name: "ernest", level: 92, class: "Priest" },
+    { name: "brian", level: 89, class: "Priest" },
+    { name: "dominique", level: 92, class: "Hunter" },
+    { name: "hemogoblin", level: 93, class: "Hunter" },
+    { name: "alexa", level: 90, class: "Hunter" },
+  ])
+);
 /**
     output
     {
