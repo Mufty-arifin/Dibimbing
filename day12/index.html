@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 12</title>
+  </head>
+  <body>
+    <!--
+    1. Html List
+    2. HTML Table
+    3. HTML Form
+    4. HTML Fieldset 
+-->
+
+    <!-- HTML List -->
+    <!-- Ordered List -->
+    <h1>The Winners</h1>
+    <ol>
+      <li>Alfa</li>
+      <li>Beta</li>
+      <li>Charlie</li>
+      <li>Delta</li>
+      <li>Echo</li>
+    </ol>
+    <ol type="1">
+      <li>Alfa</li>
+      <li>Beta</li>
+      <li>Charlie</li>
+    </ol>
+    <ol type="i">
+      <li>Alfa</li>
+      <li>Beta</li>
+      <li>Charlie</li>
+    </ol>
+
+    <!-- Unordered List-->
+    <h1>Operating System</h1>
+    <ul>
+      <li>Windows</li>
+      <li>Linux</li>
+      <li>Mac</li>
+    </ul>
+
+    <!-- Nested List-->
+    <h1>Operating System</h1>
+    <ul>
+      <li>Windows</li>
+      <li>
+        Linux
+        <ul>
+          <li>Ubuntu</li>
+          <li>Redhat</li>
+          <li>Debian</li>
+        </ul>
+      </li>
+      <li>Mac</li>
+    </ul>
+
+    <!-- Description List -->
+    <h2>A Description List</h2>
+    <dl>
+      <dt>Coffee</dt>
+      <dd>- Black Hot Drink</dd>
+      <dd>- With Sugar</dd>
+      <dt>Milk</dt>
+      <dd>- White Cold Drink</dd>
+    </dl>
+
+    <!-- HTML Table -->
+    <table>
+      <tr>
+        <th>Judul Header 1</th>
+        <th>Judul Header 2</th>
+        <th>Judul Header 3</th>
+      </tr>
+      <tr>
+        <td>Baris 1 - Kolom 1</td>
+        <td>Baris 1 - Kolom 2</td>
+        <td>Baris 1 - Kolom 3</td>
+      </tr>
+      <tr>
+        <td>Baris 2 - Kolom 1</td>
+        <td>Baris 2 - Kolom 2</td>
+        <td>Baris 2 - Kolom 3</td>
+      </tr>
+    </table>
+
+    <table border="1" cellpadding="10">
+      <tr>
+        <th bgcolor="orange">Seller</th>
+        <th bgcolor="orange">Item</th>
+        <th bgcolor="orange">Qty</th>
+        <th bgcolor="orange">Harga</th>
+      </tr>
+      <tr>
+        <td rowspan="2">Toko Sinar</td>
+        <td>Buku</td>
+        <td>1</td>
+        <td>5000</td>
+      </tr>
+      <tr>
+        <td>Pulpen</td>
+        <td>1</td>
+        <td>1000</td>
+      </tr>
+      <tr>
+        <td colspan="3">Total</td>
+        <td>6000</td>
+      </tr>
+    </table>
+
+    <!-- HTML Form-->
+    <!-- Text -->
+    <form action="login.php" method="POST" name="form-login">
+      <label>Nama</label><br />
+      <input type="text" name="username" placeholder="Masukan Username" /><br />
+      <label>Password</label><br />
+      <input type="password" name="password" placeholder="Masukan Password" />
+    </form>
+    <!-- File -->
+    <form action="upload.php" method="POST" name="form-upload">
+      <label for="myfile">Select a file:</label>
+      <input type="file" name="myfile" id="myfile" />
+      <input type="submit" value="submit" />
+    </form>
+    <!-- Radio -->
+    <form action="submit.php" method="POST" name="form-name">
+      <label>Gender</label><br />
+      <input type="radio" name="gender" value="male" /> Male<br />
+      <input type="radio" name="gender" value="female" /> Female<br />
+    </form>
+    <!-- Checkbox -->
+    <form action="submit.php" method="POST" name="form-name">
+      <input type="checkbox" name="vehicle1" value="bike" id="vehicle1" />
+      <label for="vehicle1">I have a bike</label><br />
+      <input type="checkbox" name="vehicle2" value="car" id="vehicle2" />
+      <label for="vehicle2">I have a car</label><br />
+      <input type="checkbox" name="vehicle3" value="boat" id="vehicle3" />
+      <label for="vehicle3">I have a booat</label><br />
+    </form>
+    <!-- Button -->
+    <form action="submit.php" method="POST" name="form-name">
+      <input type="button" value="submit" />
+    </form>
+    <!-- Atributes -->
+    <form action="submit.php" method="POST" name="form-name">
+      <input type="text" name="fullname" value="John Doe" /><br /><br />
+      <input
+        type="text"
+        name="fullname"
+        value="John Doe"
+        readonly
+      /><br /><br />
+      <input
+        type="text"
+        name="fullname"
+        value="John Doe"
+        disabled
+      /><br /><br />
+    </form>
+    <!-- Textarea -->
+    <form action="submit.php" method="POST" name="form-name">
+      <label>About Me</label>
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+    </form>
+    <!-- Select & Option -->
+    <form action="submit.php" method="POST" name="form-name">
+      <label>Choose your pet</label>
+      <select>
+        <option value="cat">Cat</option>
+        <option value="dog">Dog</option>
+        <option value="fish">Fish</option>
+      </select>
+    </form>
+
+    <!-- HTML Fieldset  -->
+    <h1>The Fieldset Element</h1>
+
+    <form action="">
+      <fieldset>
+        <legend>Personalia:</legend>
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" /><br /><br />
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" /><br /><br />
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" /><br /><br />
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday" /><br /><br />
+        <input type="submit" value="submit" />
+      </fieldset>
+    </form>
+  </body>
+</html>

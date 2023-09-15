@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contoh Tabel dan Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Students Data</h1>
+    <table>
+      <tr>
+        <th colspan="2">Name</th>
+        <th>Age (y.o.)</th>
+        <th>Hobbies</th>
+      </tr>
+      <tr>
+        <td rowspan="2">Alfred</td>
+        <td rowspan="2">Chang</td>
+        <td rowspan="2">27</td>
+        <td>play guitars</td>
+      </tr>
+      <tr>
+        <td>Jane Smith</td>
+      </tr>
+      <tr>
+        <td rowspan="3">Allan</td>
+        <td rowspan="3">Barry</td>
+        <td rowspan="3">30</td>
+        <td>Skatboard</td>
+      </tr>
+      <tr>
+        <td>Singing</td>
+      </tr>
+      <tr>
+        <td>Hiking</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Budi</td>
+        <td rowspan="2">Cikgu</td>
+        <td rowspan="2">16</td>
+        <td>Sleep</td>
+      </tr>
+      <tr>
+        <td>Traveling</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Budi</td>
+        <td rowspan="2">Cikgu</td>
+        <td rowspan="2">16</td>
+        <td>Sleep</td>
+      </tr>
+    </table>
+    <br />
+    <form>
+      <div class="field-group">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Input first your name!"
+        />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Input last your name!"
+        />
+      </div>
+      <div class="field-group">
+        <label for="age">Age</label>
+        <input
+          type="number"
+          id="age"
+          name="age"
+          placeholder="Input your age!"
+        />
+      </div>
+      <div class="field-group">
+        <label>Hobies</label>
+        <textarea
+          name=""
+          id=""
+          cols="40"
+          rows="5"
+          placeholder="Input your hobbies separated by comma! e.g. cycling, studying"
+        ></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
