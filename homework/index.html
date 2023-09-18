@@ -1,42 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Blog</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs Sejarah Cianjur</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
     <header>
-        <h1>Blog Kami</h1>
-        <form action="#" method="GET">
-            <input type="text" placeholder="Cari blog...">
-            <button type="submit">Cari</button>
+      <nav>
+        <a href="#profile">Cianjur</a>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#sejarah">Sejarah</a></li>
+          <li><a href="#geografis">Geografis</a></li>
+          <li><a href="#wisata">Wisata</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+        <form class="search-form" action="cari.html" method="GET">
+          <input type="text" name="query" placeholder="Cari..." />
+          <button type="submit">Cari</button>
         </form>
+      </nav>
+      <div style="text-align: center" class="jumbotron">
+        <h1>Kabupaten Cianjur</h1>
+        <p>Ngaos, Mamaos, Maenpo, Tatanen, Tanginas, Someah, Sauyunan</p>
+      </div>
     </header>
     <main>
-        <article class="blog-post">
-            <img src="blog1.jpg" alt="Gambar Blog 1">
-            <h2>Judul Blog 1</h2>
-            <p>Ringkasan singkat tentang blog ini.</p>
-            <a href="detail.html">Baca Selengkapnya</a>
+      <div>
+        <article style="text-align: center" id="profile" class="card">
+          <h2>Kabupaten Cianjur</h2>
+          <img src="Kabupaten Cianjur.png" class="profile-img" alt="" />
+          <p><strong>Negara :</strong> Indonesia</p>
+          <p><strong>Hari Jadi :</strong> 12 Juli 1677</p>
+          <p><strong>Luas Total :</strong> 3.501,48 km2</p>
+          <p><strong>Bahasa Daerah :</strong> Sunda</p>
+          <p><strong>Kode Telepon :</strong> 0263</p>
         </article>
-        <!-- Artikel lainnya di sini -->
-        <article class="blog-post">
-            <img src="blog1.jpg" alt="Gambar Blog 1">
-            <h2>Judul Blog 1</h2>
-            <p>Ringkasan singkat tentang blog ini.</p>
-            <a href="detail.html">Baca Selengkapnya</a>
+        <article id="sejarah" class="card">
+          <h2>Sejarah</h2>
+          <img src="sejarah.png" class="featured-image" alt="sejarah" />
+          <p>
+            Sejarah Kabupaten Cianjur sangat sedikit diketahui, akan tetapi
+            menurut ceritacerita dari orang tua, daerah Kabupaten Cianjur
+            dahulunya adalah termasuk kedalam wilayah Kerajaan Pajajaran. Hal
+            ini dapat dilihat dari banyaknya kepercayaan masyarakat Cianjur yang
+            sama dengan masyarakat pada jaman kerajaan pajajaran yang banyak
+            mengenal kebudayaan hindu
+          </p>
+          <a href="detail.html" class="button">Baca Selengkapnya</a>
         </article>
-        <article class="blog-post">
-            <img src="blog1.jpg" alt="Gambar Blog 1">
-            <h2>Judul Blog 1</h2>
-            <p>Ringkasan singkat tentang blog ini.</p>
-            <a href="detail.html">Baca Selengkapnya</a>
+        <article id="geografis" class="card">
+          <h2>Geografis</h2>
+          <img src="Geografis.png" class="featured-image" alt="geografis" />
+          <p>
+            Secara Geografis, Kabupaten Cianjur terletak pada 106. 25o -107. 25o
+            Bujur Timur dan 6.21o - 7.32o Lintang Selatan dengan batas-batas
+            administratif :
+          </p>
+          <ul>
+            <li>
+              Sebelah Utara berbatasan dengan wilayah Kabupaten Bogor dan
+              Kabupaten Purwakarta.
+            </li>
+            <li>Sebelah Barat berbatasan dengan wilayah Kabupaten Sukabumi.</li>
+            <li>Sebelah Selatan berbatasan dengan Samudra Indonesia</li>
+            <li>
+              Sebelah Timur berbatasan dengan wilayah Kabupaten Bandung dan
+              Kabupaten Garut.
+            </li>
+          </ul>
+          <p>
+            Luas wilayah Kabupaten Cianjur +/- 3.501,48 km2 terbagi dengan ciri
+            topografi sebagian besar berupa daerah pegunungan, berbukit-bukit
+            dan sebagian merupakan dataran rendah, dengan ketinggian 0 s/d 2.962
+            meter diatas permukaan laut (Puncak Gunung Gede) dengan kemiringan
+            antara 1% s/d 15%.
+          </p>
         </article>
+        <article id="wisata" class="card">
+          <h2>Wisata</h2>
+          <p>
+            Cianjur sebagian besar merupakan daerah pegunugan, berbukit-bukit,
+            dan sebagian merupakan dataran rendah, sehingga banyak sekali objek
+            wisata alam di kabupaten cianjur.
+          </p>
+          <section>
+            <h3>Taman Nasional Gunung Gede Pangrango</h3>
+            <img src="TNGGP.png" class="featured-image" alt="tnggp" />
+            <p>
+              Salahsatu dari 33 Taman Nasional di Indonesia yang memiliki
+              keanekaragaman flora dan fauna dengan luas 15.196 Ha serta
+              ketinggian Gunung Gede 2.958 mdpm dan Pangrango 3.019 mdpm.
+              Terdapat beberapa kawah ; kawah ratu, wadon, lanang dan baru.
+              Lokasi di Kecamatan Pacet dengan jarak tempuh dari Jakarta sekitar
+              80km.
+            </p>
+          </section>
+          <section>
+            <h3>Curug Cibereum</h3>
+            <img
+              src="curug ciberem.png"
+              class="featured-image"
+              alt="curugciberem"
+            />
+            <p>
+              Curug Cibereum atau Air Terjun Cibereum terletak di kawansan Taman
+              Nasional Gunung Gede Pangrango (TNGGP) curug ini terdiri dari air
+              terjun utama Curug Cibeureum, dan dua air terjun lain yang lebih
+              kecil, Curug Cidendeng dan Curug Cikundul. Curug Cibeureum adalah
+              air terjun terbesar dan paling pendek di kawasan ini, letaknya
+              yang lebih terbuka dan dekat shelter sehingga lebih banyak
+              dikerumuni. Nama Cibeureum berasal dari bahasa sunda yang berarti
+              sungai merah, nama ini diambil dari nuansa merah dinding tebing
+              yang terbentuk dari lumut merah yang tumbuh secara endemik di
+              sana.
+            </p>
+          </section>
+          <section>
+            <h3>Curug Cikondang</h3>
+            <img
+              src="curug cikondang.jpg"
+              class="featured-image"
+              alt="curugcikondang"
+            />
+            <p>
+              Curug Cikondang merupakan salah satu daya tarik wisata yang ada di
+              Kecamatan Cempaka Desa Sukadana dengan lebar ± 30 M dan tinggi ±50
+              M. ODTW ini sangat berpotensi sekali untuk dikembangkan.
+            </p>
+            <p>
+              Fasilitas penunjang yang terdapat di ODTW Curug Cikondang
+              diantaranya adalah Toilet, Mushola, Tempat Parkir, warung makanan
+              dan minuman. Akses menuju ODTW ini cukup sulit dilalui karena
+              tidak adanya angkutan umum yang langsung menuju ke ODTW tersebut,
+              jalan yang sempit dan juga rusak. Pihak pengelola ODTW ini
+              dipegang oleh Desa dan karang taruna setempat. Tarif masuk sebesar
+              Rp 5.000 dan parkir Rp 3.000.
+            </p>
+          </section>
+        </article>
+        <article id="kontak" style="text-align: center" class="card">
+          <h2>Hubungi Kami</h2>
+          <form action="">
+            <label for="">Nama</label> <br />
+            <input type="text" id="name" name="name" /><br /><br />
+            <label for="">Email</label> <br />
+            <input type="text" id="email" name="email" /><br /><br />
+            <label for="">Pesan</label> <br />
+            <textarea
+              name="hobbies"
+              id=""
+              cols="40"
+              rows="3"
+              placeholder="Masukan Pesan Anda"
+            ></textarea
+            ><br />
+            <button type="submit">Kirim</button>
+          </form>
+        </article>
+      </div>
     </main>
-    <footer>
-        <p>&copy; 2023 Blog Kami</p>
-    </footer>
-</body>
+    <footer><p>Muhammad Mufty Arifin &#169; 2023</p></footer>
+  </body>
 </html>

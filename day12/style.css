@@ -14,3 +14,8 @@ label {
 .field-group{
     margin-bottom: 2vh;
 }
+hr{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border:  1px solid black;
+}

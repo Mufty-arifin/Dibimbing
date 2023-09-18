@@ -260,73 +260,74 @@ console.log(
 
 console.log(graduates([])); //{}
 
-// SOAL 4 
-/* 
-  ===========
-  Shopping Time
-  ===========
-  
-  [INSTRUCTION]
-  Toko X menjual beberapa barang yang bisa anda beli, daftar barangnya adalah sebagai berikut
-    const priceList = [
-      ["Sepatu Stacattu", 1500000],
-      ["Baju Zoro", 500000],
-      ["Baju H&N", 250000],
-      ["Sweater Uniklooh", 175000],
-      ["Casing Handphone", 50000],
-    ];
-  tugas anda adalah membuat program untuk menentukan barang apa saja yang bisa dibeli bedasarkan uang yang user miliki.
-  - price list barang sudah ditentukan
-  - program akan menerima 2 parameter, yaitu member id dan uang
-  - hasil keluaran akan menampilkan 4 properti, yaitu:
-    . memberId
-    . money
-    . listPurchased
-    . changeMoney
-  - pada properti listPurchased akan menampung barang2 yang bisa dibeli sesuai dengan jumlah uang yang di punyai
-  - changeMoney minimal 0 dan tidak boleh minus
-  - jika member tidak ada maka Toko X akan menampilkan respon "Mohon maaf, toko X hanya berlaku untuk member saja"
-  - jika saldo tidak cukup maka akan menampilkan pesan "Mohon maaf, uang tidak cukup"
-  
-  
-  [EXAMPLE]
-  untuk contoh inputan dan keluaran bisa dilihat Test Case dibawah
-  
-  [RULE]
-  1. dilarang menggunakan indexOf(), find(), filter()
-  2. hanya boleh menggunakan push()
-  3. dilarang menggunakan regex
-  */
+// SOAL 4
+// /*
+//   ===========
+//   Shopping Time
+//   ===========
+
+//   [INSTRUCTION]
+//   Toko X menjual beberapa barang yang bisa anda beli, daftar barangnya adalah sebagai berikut
+const priceList = [
+  ["Sepatu Stacattu", 1500000],
+  ["Baju Zoro", 500000],
+  ["Baju H&N", 250000],
+  ["Sweater Uniklooh", 175000],
+  ["Casing Handphone", 50000],
+];
+//   tugas anda adalah membuat program untuk menentukan barang apa saja yang bisa dibeli bedasarkan uang yang user miliki.
+//   - price list barang sudah ditentukan
+//   - program akan menerima 2 parameter, yaitu member id dan uang
+//   - hasil keluaran akan menampilkan 4 properti, yaitu:
+//     . memberId
+//     . money
+//     . listPurchased
+//     . changeMoney
+//   - pada properti listPurchased akan menampung barang2 yang bisa dibeli sesuai dengan jumlah uang yang di punyai
+//   - changeMoney minimal 0 dan tidak boleh minus
+//   - jika member tidak ada maka Toko X akan menampilkan respon "Mohon maaf, toko X hanya berlaku untuk member saja"
+//   - jika saldo tidak cukup maka akan menampilkan pesan "Mohon maaf, uang tidak cukup"
+
+//   [EXAMPLE]
+//   untuk contoh inputan dan keluaran bisa dilihat Test Case dibawah
+
+//   [RULE]
+//   1. dilarang menggunakan indexOf(), find(), filter()
+//   2. hanya boleh menggunakan push()
+//   3. dilarang menggunakan regex
+//   */
 function shoppingTime(memberId, money) {
   // you can only write your code here!
-  const priceList = [
-    ["Sepatu Stacattu", 1500000],
-    ["Baju Zoro", 500000],
-    ["Baju H&N", 250000],
-    ["Sweater Uniklooh", 175000],
-    ["Casing Handphone", 50000],
-  ];
   if (!memberId) {
     return "Mohon maaf, toko X hanya berlaku untuk member saja";
   }
-  if (money < 50000) {
-    return "Mohon maaf, uang tidak cukup";
-  }
-  const result = {
-    memberId: memberId,
-    money: money,
-    listPurchased: [],
-    changeMoney: 0,
-  };
-  for (let i = 0; i < priceList.length; i++) {
-    if (money >= priceList[i][1]) {
-      result.listPurchased.push(priceList[i][0]);
-      money -= priceList[i][1];
+  let listPurchased = [];
+  let priceListMurah = [...priceList];
+  let changeMoney = money ? money : 0;
+  for (var i = 0; i < priceList.length - 1; i++) {
+    for (var j = 0; j < priceList.length - i - 1; j++) {
+      if (priceListMurah[j][1] > priceListMurah[j + 1][1]) {
+        var temp = priceListMurah[j];
+        priceListMurah[j] = priceListMurah[j + 1];
+        priceListMurah[j + 1] = temp;
+      }
     }
   }
-  result.changeMoney = money;
 
-  return result;
+  for (let i = 0; i < priceListMurah.length; i++) {
+    if (priceListMurah[i][1] <= changeMoney) {
+      listPurchased.push(priceListMurah[i][0]);
+      changeMoney -= priceListMurah[i][1];
+    }
+  }
+  return listPurchased.length === 0
+    ? "Mohon maaf, uang tidak cukup"
+    : {
+        memberId: memberId,
+        money: money,
+        listPurchased: listPurchased,
+        changeMoney: changeMoney,
+      };
 }
 // TEST CASES
 console.log(shoppingTime("1820RzKrnWn08", 2475000));
@@ -420,67 +421,31 @@ function getGuildMemberInfo(members) {
     return "invalid data";
   }
 
-  // Initialize variables to store total level and class counts
   let totalLevel = 0;
-  let classCounts = {};
+  let result = { totalMember: members.length, averageLevel: 0 };
 
-  // Iterate through the members array
   for (let i = 0; i < members.length; i++) {
-    const member = members[i];
+    totalLevel += members[i].level;
+  }
 
-    // Check if member has a valid level
-    if (typeof member.level === "number") {
-      // Calculate total level
-      totalLevel += member.level;
-    }
+  result.averageLevel = Math.round(totalLevel / members.length);
 
-    // Count members per class
-    if (typeof member.class === "string") {
-      if (classCounts[member.class]) {
-        classCounts[member.class]++;
+  for (let i = 0; i < members.length; i++) {
+    if (members[i].level >= result.averageLevel) {
+      if (result[members[i].class]) {
+        result[members[i].class].push({
+          name: members[i].name,
+          level: members[i].level,
+        });
       } else {
-        classCounts[member.class] = 1;
+        result[members[i].class] = [
+          { name: members[i].name, level: members[i].level },
+        ];
       }
     }
   }
 
-  // Calculate average level
-  const totalMembers = members.length;
-  const averageLevel = Math.floor(totalLevel / totalMembers);
-
-  // Initialize an object to store top members per class
-  const topMembers = {};
-
-  // Iterate through the members array again to find top members
-  for (let i = 0; i < members.length; i++) {
-    const member = members[i];
-
-    if (
-      typeof member.level === "number" &&
-      typeof member.class === "string" &&
-      member.level >= averageLevel
-    ) {
-      if (!topMembers[member.class]) {
-        topMembers[member.class] = [];
-      }
-      topMembers[member.class].push({ name: member.name, level: member.level });
-    }
-  }
-
-  // Create an object to store the final result
-  const guildInfo = {
-    totalMember: totalMembers,
-    averageLevel: averageLevel,
-  };
-
-  // Add topMembers properties manually
-  for (const className in topMembers) {
-    if (topMembers.hasOwnProperty(className)) {
-      guildInfo[className] = topMembers[className];
-    }
-  }
-
-  return guildInfo;
+  return result;
 }
 
 // //]));

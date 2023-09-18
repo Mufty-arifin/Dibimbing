@@ -1,68 +1,77 @@
-/* Reset CSS */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+
 * {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  font-family: "Quicksand", sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
-
-/* Styling Header */
 header {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
+  display: inline;
 }
 
-header h1 {
-  font-size: 24px;
-}
-
-header form {
-  margin-top: 10px;
-}
-
-header input[type="text"] {
-  padding: 5px;
-}
-
-header button {
-  padding: 5px 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-/* Styling Blog Post */
 main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
   padding: 20px;
+  overflow: auto;
 }
-
-.blog-post {
-  max-width: 300px;
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: center;
-}
-
-.blog-post img {
-  max-width: 100%;
+nav {
+  position: sticky;
+  background-color: #32a852;
+  padding: 5px;
+  top: 0;
   height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+nav li {
+  display: inline;
+  list-style-type: none;
+  margin-right: 20px;
+}
+nav a:hover {
+  font-weight: bold;
 }
 
-.blog-post h2 {
-  font-size: 18px;
-  margin: 10px 0;
+h2,
+h3 {
+  color: #32a852;
 }
-
-/* Styling Footer */
-footer {
-  background-color: #333;
-  color: #fff;
+.jumbotron {
+  background-image: url(bale.jpg);
+  font-size: 20px;
+  padding: 150px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 0 -200px;
   text-align: center;
-  padding: 10px;
+  color: white;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+#profile {
+  text-align: center;
+}
+#profile img {
+  width: 200px;
+}
+#content {
+  float: left;
+  width: 75%;
+}
+
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #32a852;
+  text-align: center;
+  font-weight: bold;
 }
