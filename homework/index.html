@@ -3,33 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blogs Sejarah Cianjur</title>
+    <title>Mufty.com</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Header -->
     <header>
       <nav>
-        <a href="#profile">Cianjur</a>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#sejarah">Sejarah</a></li>
-          <li><a href="#geografis">Geografis</a></li>
-          <li><a href="#wisata">Wisata</a></li>
-          <li><a href="#kontak">Kontak</a></li>
+        <a href="#profile" class="nav-brand">Mufty.com</a>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+          <li class="nav-item">
+            <a href="#sejarah" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="#geografis" class="nav-link">Layanan</a>
+          </li>
+          <li class="nav-item">
+            <a href="#wisata" class="nav-link">Tentang Kami</a>
+          </li>
+          <li class="nav-item">
+            <a href="#kontak" class="nav-link">Kontak</a>
+          </li>
         </ul>
         <form class="search-form" action="cari.html" method="GET">
           <input type="text" name="query" placeholder="Cari..." />
           <button type="submit">Cari</button>
         </form>
       </nav>
-      <div style="text-align: center" class="jumbotron">
+      <div class="jumbotron">
         <h1>Kabupaten Cianjur</h1>
         <p>Ngaos, Mamaos, Maenpo, Tatanen, Tanginas, Someah, Sauyunan</p>
       </div>
     </header>
+
+    <!-- Main Content -->
     <main>
-      <div>
+      <div id="content">
         <article style="text-align: center" id="profile" class="card">
           <h2>Kabupaten Cianjur</h2>
           <img src="Kabupaten Cianjur.png" class="profile-img" alt="" />
@@ -50,7 +60,7 @@
             sama dengan masyarakat pada jaman kerajaan pajajaran yang banyak
             mengenal kebudayaan hindu
           </p>
-          <a href="detail.html" class="button">Baca Selengkapnya</a>
+          <a href="detail.html" class="button-detail">Baca Selengkapnya</a>
         </article>
         <article id="geografis" class="card">
           <h2>Geografis</h2>
@@ -142,9 +152,9 @@
             </p>
           </section>
         </article>
-        <article id="kontak" style="text-align: center" class="card">
-          <h2>Hubungi Kami</h2>
-          <form action="">
+        <article id="kontak" class="card">
+          <h2 class="tittle-contact">Hubungi Kami</h2>
+          <form action="" class="form-contact">
             <label for="">Nama</label> <br />
             <input type="text" id="name" name="name" /><br /><br />
             <label for="">Email</label> <br />
@@ -162,7 +172,31 @@
           </form>
         </article>
       </div>
+      <aside>
+        <article class="about card">
+          <header>
+            <h2>Profil Diri</h2>
+            <figure>
+              <img src="muftyarifin.png" />
+            </figure>
+          </header>
+          <section>
+            <table>
+              <tr>
+                <th>Nama</th>
+                <td>Muhammad Mufty Arifin</td>
+              </tr>
+              <tr>
+                <th>Hobi</th>
+                <td>Olahraga</td>
+              </tr>
+            </table>
+          </section>
+        </article>
+      </aside>
     </main>
+
+    <!-- Footer -->
     <footer><p>Muhammad Mufty Arifin &#169; 2023</p></footer>
   </body>
 </html>

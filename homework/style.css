@@ -9,10 +9,11 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* Header */
 header {
   display: inline;
 }
-
 main {
   padding: 20px;
   overflow: auto;
@@ -28,6 +29,12 @@ nav {
   align-items: center;
   padding: 0 24px;
 }
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: white;
+}
 nav li {
   display: inline;
   list-style-type: none;
@@ -37,9 +44,35 @@ nav a:hover {
   font-weight: bold;
 }
 
-h2,
-h3 {
+.nav-brand {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.nav-link {
+  transition: 0.7s ease;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.search-form input[type="text"] {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.search-form button[type="submit"] {
+  background-color: white;
   color: #32a852;
+  padding: 6px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.search-form button[type="submit"]:hover {
+  background-color: rgb(188, 188, 188);
 }
 .jumbotron {
   background-image: url(bale.jpg);
@@ -50,6 +83,76 @@ h3 {
   background-position: 0 -200px;
   text-align: center;
   color: white;
+}
+
+/* Main */
+main {
+  padding: 20px;
+  overflow: auto;
+}
+
+h2,
+h3 {
+  color: #32a852;
+}
+.button-detail {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #32a852;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button-detail:hover {
+  background-color: #185b2a;
+}
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+.form-contact {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Mengatur tampilan label */
+.form-contact label {
+  font-weight: bold;
+  color: #32a852;
+}
+
+/* Mengatur tampilan input dan textarea */
+.form-contact input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Mengatur tampilan tombol submit */
+.form-contact button[type="submit"] {
+  background-color: #32a852;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Mengatur tampilan tombol submit saat dihover */
+.form-contact button[type="submit"]:hover {
+  background-color: #185b2a;
+}
+.tittle-contact {
+  text-align: center;
 }
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -66,6 +169,20 @@ h3 {
 #content {
   float: left;
   width: 75%;
+}
+aside {
+  float: right;
+  width: 25%;
+  padding-left: 20px;
+}
+.about img {
+  width: 200px;
+  border: 5px solid #eaeaea;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.about header {
+  text-align: center;
 }
 
 footer {
