@@ -1,0 +1,59 @@
+.icon {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.linkedin {
+  width: 150px;
+  height: 150px;
+  background-color: #0274b3;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 150px;
+  line-height: 150px;
+  color: #fff;
+}
+.facebook {
+  font-family: "klavika";
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #3b5998;
+  text-align: center;
+  color: white;
+  line-height: 150px;
+  font-size: 130px;
+}
+.instagram {
+  width: 140px;
+  height: 140px;
+  border: 10px solid black;
+  border-radius: 32px;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.circle {
+  width: 85px;
+  height: 85px;
+  border: 10px solid black;
+  border-radius: 50%;
+  background: transparent;
+  position: absolute;
+}
+.circle2 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: black;
+  position: absolute;
+  top: 8px;
+  right: 10px;
+}
+@font-face {
+  font-family: klavika;
+  src: url(KlavikaBoldBold.otf);
+}
