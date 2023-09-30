@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Roboto;
+  src: url(asset/font/RobotoSlab.ttf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +13,14 @@
 html {
   scroll-behavior: smooth;
 }
+body {
+  font-family: "Roboto";
+}
 h1 {
   font-size: 50px;
 }
+
+/* Navbar */
 .navbar {
   background-color: #313535;
   position: fixed;
@@ -26,15 +35,18 @@ h1 {
 }
 .nav-brand {
   color: blanchedalmond;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 700;
   font-style: italic;
 }
 .nav-menu a {
   color: blanchedalmond;
   display: inline-block;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin: 0 1rem;
+}
+.nav-menu a:hover {
+  color: white;
 }
 
 .navbar input[type="text"] {
@@ -45,7 +57,7 @@ h1 {
 .navbar input[type="submit"] {
   cursor: pointer;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 13px;
   background-color: bisque;
   width: 50px;
   padding: 5px;
@@ -55,7 +67,7 @@ h1 {
 
 .hero {
   min-height: 100vh;
-  background-image: url("img/bg1.jpg");
+  background-image: url("asset/img/bg1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -107,6 +119,7 @@ h1 {
   height: 200px;
   width: 200px;
 }
+
 /* Blog */
 .blog {
   background-color: antiquewhite;
@@ -132,8 +145,8 @@ h1 {
 }
 
 .blog .menu-card {
-  width: 320px;
-  height: 400px;
+  width: 330px;
+  height: 430px;
   border-radius: 10px;
   margin: 15px 15px;
   border: 3px solid black;
@@ -163,12 +176,14 @@ h1 {
   background-color: #fff;
   color: #313535;
 }
+
+/* Contact */
 .contact h1 {
   margin-bottom: 60px;
   text-align: center;
   font-size: 50px;
 }
-/* Style the form section */
+
 .form-contact {
   background-color: #f0f0f0;
   padding: 20px;
@@ -177,14 +192,12 @@ h1 {
   margin: 20px;
 }
 
-/* Style labels */
 .contact label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
 
-/* Style text input fields */
 .contact input[type="text"],
 .contact input[type="email"],
 .contact textarea {
@@ -195,7 +208,6 @@ h1 {
   border-radius: 5px;
 }
 
-/* Style the submit button */
 .contact input[type="submit"] {
   background-color: #313535;
   color: #fff;
@@ -205,7 +217,6 @@ h1 {
   cursor: pointer;
 }
 
-/* Style the submit button on hover */
 input[type="submit"]:hover {
   background-color: #fff;
   color: #313535;
@@ -218,16 +229,6 @@ footer {
   padding: 1rem 0 3rem;
 }
 
-footer .socials {
-  padding: 1rem 0;
-}
-
-footer .socials a {
-  color: #fff;
-  margin: 1rem;
-}
-
-footer .socials a:hover,
 footer .links a:hover {
   color: white;
 }
@@ -237,7 +238,7 @@ footer .links {
 }
 
 footer .links a {
-  color: #fff;
+  color: blanchedalmond;
   padding: 0.7rem 1rem;
 }
 
@@ -265,13 +266,11 @@ footer .credit a {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Mengatur gaya untuk elemen <h1> */
 .detail h1 {
-  font-size: 24px;
+  font-size: 40px;
   color: #333;
 }
 
-/* Mengatur gaya untuk gambar */
 .detail img {
   max-width: 100%;
   height: auto;
@@ -279,16 +278,44 @@ footer .credit a {
   margin: 10px auto;
 }
 
-/* Mengatur gaya untuk elemen <h2> */
-.detail h2 {
-  font-size: 20px;
-  color: #313535;
-}
-
-/* Mengatur gaya untuk elemen <p> */
 .detail p {
   font-size: 16px;
   line-height: 1.5;
   color: #666;
   margin: 10px 0;
+}
+.detail .detail-date {
+  font-size: 15px;
+  margin-top: 3px;
+}
+#content {
+  float: left;
+  width: 75%;
+}
+main {
+  padding: 20px;
+  overflow: auto;
+}
+aside {
+  float: right;
+  width: 25%;
+  padding-left: 20px;
+}
+.aside {
+  margin-top: 70px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+.new-blog {
+  margin-top: 10px;
+}
+.new-blog a {
+  color: #000;
+}
+.new-blog .date-blog {
+  color: #666;
+  font-size: 15px;
 }
