@@ -79,11 +79,24 @@ h1 {
   padding: 1.4rem 7%;
   max-width: 60rem;
 }
+.hero .hero-tittle a {
+  color: black;
+  font-weight: 400;
+  font-size: 17px;
+  background-color: bisque;
+  padding: 15px 50px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.hero .hero-tittle a:hover {
+  background-color: white;
+}
 .hero .hero-tittle h1 {
   color: blanchedalmond;
   line-height: 1.2;
 }
 .hero .hero-tittle p {
+  margin-bottom: 50px;
   color: #fff;
   font-size: 1.6rem;
   margin-top: 1rem;
@@ -259,7 +272,6 @@ footer .credit a {
 .detail {
   margin-top: 70px;
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -284,10 +296,12 @@ footer .credit a {
   color: #666;
   margin: 10px 0;
 }
+
 .detail .detail-date {
   font-size: 15px;
   margin-top: 3px;
 }
+
 #content {
   float: left;
   width: 75%;
@@ -296,26 +310,49 @@ main {
   padding: 20px;
   overflow: auto;
 }
+
 aside {
   float: right;
   width: 25%;
   padding-left: 20px;
 }
+
 .aside {
   margin-top: 70px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   padding: 20px;
-  background-color: #f2f2f2;
+  background-color: white;
 }
 
 .new-blog {
   margin-top: 10px;
 }
+
 .new-blog a {
   color: #000;
 }
+
 .new-blog .date-blog {
   color: #666;
   font-size: 15px;
+}
+
+hr {
+  margin-top: 50px;
+  border: 1px black solid;
+}
+
+.share p {
+  color: black;
+}
+
+.share .icon {
+  display: flex;
+  gap: 10px;
+}
+
+.share .icon img {
+  width: 20px;
+  height: 20px;
 }
