@@ -33,19 +33,14 @@ function sortStart(arr) {
       }
     }
   }
-  // Menginisialisasi variabel result
-  let result = "";
+  // Mendapatkan string pertama dari array yang sudah diurutkan
+  const sortedString = arr[0];
 
-  // Loop melalui setiap karakter pada string pertama (indeks 0)
-  for (let i = 0; i < arr[0].length; i++) {
-    // Menambahkan karakter ke result, diikuti dengan "***"
-    result += arr[0][i];
-    if (i !== arr[0].length - 1) {
-      result += "***";
-    }
-  }
+  // Memisahkan string yang sudah diurutkan menjadi array karakter
+  // Menggabungkan karakter-karakter dengan '***' di antara mereka dan menyimpannya dalam variabel result
+  const result = sortedString.split("").join("***");
 
-  return result;
+  return result; // Mengembalikan string yang sudah diurutkan dan digabungkan
 }
 
 // Test case
