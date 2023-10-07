@@ -1,0 +1,64 @@
+body {
+  font-family: "rufina";
+  background-color: #233000;
+}
+.navbar {
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #233000dc;
+  border-bottom: 1px solid #233000;
+}
+.navbar .navbar-brand {
+  color: white;
+  font-size: 30px;
+}
+
+.navbar .navbar-brand span {
+  font-size: 35px;
+  font-weight: bold;
+}
+.navbar .navbar-nav .nav-item .nav-link {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 50px 10px 10px;
+}
+
+.jumbotron {
+  margin-top: 150px;
+  color: white;
+  margin-bottom: 100px;
+}
+.jumbotron img {
+  width: 460px;
+  height: 460px;
+}
+.jumbotron h1 {
+  font-size: 60px;
+}
+/* .herro {
+  color: white;
+}
+
+.title-herro {
+  padding-right: 50px;
+}
+
+} */
+.about {
+  padding: 50px;
+  background-color: white;
+}
+.about h1 {
+  font-weight: bold;
+  font-size: 44px;
+}
+.about h3 {
+  font-size: 34px;
+  font-weight: bold;
+}
+.about p {
+  font-size: 16px;
+}

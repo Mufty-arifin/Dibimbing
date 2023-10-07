@@ -16,15 +16,17 @@
     />
     <style>
       .card-signin {
+        border-radius: 8px;
         padding: 48px 24px 48px 24px;
         box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
         width: 400px;
-        margin-top: 48px;
       }
       .card-signin-tittle {
-        font-family: Work Sans;
+        color: #000032;
+        font-family: "Work Sans", sans-serif;
         font-size: 25px;
         font-weight: 500;
+        line-height: normal;
         margin-bottom: 41px;
       }
       .card-signin-input {
@@ -66,12 +68,27 @@
         background: #f2f2f2;
         border-radius: 4px;
       }
+      .navbar-search-input {
+        width: 100%;
+        height: 48px;
+        border-radius: 24px;
+        border: 1.5px solid var(--brand-indigo-marine-000032, #000032);
+      }
+      .navbar-button-signin {
+        color: #f6a973;
+        text-decoration: none;
+        font-weight: 500;
+        min-width: 85px;
+      }
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          >Navbar
+          <img src="" alt="" width="auto" height="49" />
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -84,51 +101,36 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
+          <div class="d-flex flex-row align-items-center" style="gap: 32px">
+            <div class="input-group mb-3 navbar-search-input">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search for anything"
+                aria-label="Search for anything"
+                aria-describedby="basic-addon2"
+                style="border: none; border-radius: 24px"
+              />
+              <span
+                style="
+                  background-color: transparent;
+                  border-radius: 24px;
+                  border: none;
+                "
+                class="input-group-text"
+                id="basic-addon2"
+                ><i class="bi bi-search"></i
+              ></span>
+            </div>
+            <button type="button" class="btn btn-link navbar-button-signin">
+              Sign in
             </button>
-          </form>
+            <i class="bi bi-cart"></i>
+          </div>
         </div>
       </div>
     </nav>
-    <div class="container">
+    <div class="container mt-3">
       <div class="card-signin d-flex flex-column">
         <p class="card-signin-tittle">Sign In</p>
         <form action="">
