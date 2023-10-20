@@ -23,7 +23,7 @@ function testCase(i, o) {
 // write code here
 function sortStart(arr) {
   // Mengurutkan array secara ascending berdasarkan karakter ASCII
-  //sorting
+  //sorting manual
   for (let i = 0; i < arr.length - 1; i++) {
     for (let j = 0; j < arr.length - i - 1; j++) {
       if (arr[j] > arr[j + 1]) {
@@ -33,12 +33,12 @@ function sortStart(arr) {
       }
     }
   }
-  // Mendapatkan string pertama dari array yang sudah diurutkan
-  const sortedString = arr[0];
 
-  // Memisahkan string yang sudah diurutkan menjadi array karakter
-  // Menggabungkan karakter-karakter dengan '***' di antara mereka dan menyimpannya dalam variabel result
-  const result = sortedString.split("").join("***");
+  // arr[0] Mendapatkan string pertama dari array yang sudah diurutkan
+  // .split("") Memisahkan string yang sudah diurutkan menjadi array karakter
+  // .join("***") Menggabungkan karakter-karakter dengan '***' di antara mereka dan menyimpannya dalam variabel result
+
+  const result = arr[0].split("").join("***");
 
   return result; // Mengembalikan string yang sudah diurutkan dan digabungkan
 }

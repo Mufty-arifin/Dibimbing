@@ -2,11 +2,17 @@ body {
   font-family: "rufina";
   background-color: #233000;
 }
+
+.web-padding {
+  padding-left: 8rem !important;
+  padding-right: 8rem !important;
+}
 .navbar {
   justify-content: space-between;
   background-color: #233000dc;
   border-bottom: 1px solid #233000;
 }
+
 .navbar .navbar-brand {
   color: white;
   font-size: 30px;
@@ -20,16 +26,17 @@ body {
   color: white;
   font-size: 20px;
   font-weight: bold;
-  padding: 10px 50px 10px 10px;
+  padding: 10px 0px 10px 0px;
+  margin: 0 0 0 50px;
 }
 
 .jumbotron {
-  margin-top: 150px;
+  margin-top: 50px;
   color: white;
   margin-bottom: 100px;
 }
 .jumbotron img {
-  width: 460px;
+  width: 100%;
   height: 460px;
 }
 .jumbotron h1 {
@@ -45,7 +52,7 @@ body {
 
 } */
 .about {
-  padding: 50px;
+  padding: 50px 0;
   background-color: white;
 }
 .about h1 {
@@ -58,4 +65,30 @@ body {
 }
 .about p {
   font-size: 16px;
+}
+.card-row {
+  margin-left: 10px;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/* Menu */
+.menu {
+  padding: 50px 0;
+  background-color: #ebf0e4;
+}
+.menu h1 {
+  text-align: center;
+}
+
+.circle {
+  padding: 25px 25px 25px 25px;
+  margin-left: 100px;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #EBF0E4;
 }
