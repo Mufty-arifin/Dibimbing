@@ -30,3 +30,4 @@ const checkPalindrom = (data) =>{
 
 console.log(checkPalindrom("kasur"))
 console.log(checkPalindrom("radar"))
+
