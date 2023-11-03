@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* Style untuk kotak induk */
+  .container {
+    /* flex-direction: row-reverse; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border: 2px solid #333;
+  }
+
+  /* Style untuk kotak anak */
+  .box {
+    background-color: antiquewhite;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #777;
+    margin: 10px;
+  }
+
+  /* Style untuk tombol */
+  .button {
+    
+    font-size: 20px;
+    background-color: #123b57;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Hover effect pada tombol */
+  .button:hover {
+    background-color: #0984ff;
+    transform:scale(1.1) /* Mengubah ukuran tombol saat dihover */
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+  </div>
+  <br>
+  <button class="button">Tombol</button>
+</body>
+</html>

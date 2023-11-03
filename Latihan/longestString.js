@@ -20,22 +20,22 @@ const longestString = (arr) => {
   let longest = ""; // Buat variabel untuk menyimpan string terpanjang
 
   // for
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i].length > longest.length) {
-        longest = arr[i]
-    }
-    
-  }
+
+  // for (let i = 0; i < arr.length; i++) {
+  //   if (arr[i].length > longest.length) {
+  //       longest = arr[i]
+  //   }
+  // }
 
   //foreach
   
-//   arr.forEach((str) => {
-//     // Periksa panjang string saat ini
-//     if (str.length > longest.length) {
-//       // Jika lebih panjang, perbarui nilai string terpanjang
-//       longest = str;
-//     }
-//   });
+  arr.forEach((str) => {
+    // Periksa panjang string saat ini
+    if (str.length > longest.length) {
+      // Jika lebih panjang, perbarui nilai string terpanjang
+      longest = str;
+    }
+  });
 
   return longest; // Mengembalikan string terpanjang
 };
