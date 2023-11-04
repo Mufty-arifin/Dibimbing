@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+}
+.footer-wrapper{
+    background-color: black;
+}
+.footer{
+    
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-right{
+    display: flex;
+    gap: 20px;
+    color: white;
+}
