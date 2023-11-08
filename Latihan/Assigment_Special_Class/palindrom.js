@@ -9,4 +9,3 @@ const checkPalindrom = (data) =>{
 
 
 console.log(checkPalindrom("kasur rusak"))
-console.log(checkPalindrom("saya makan"))
