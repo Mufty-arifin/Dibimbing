@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+}
+.navbar-wrapper{
+    background-color: black;
+}
+.navbar {
+    color: white;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+}
+.nav-links{
+    display: flex;
+    gap: 20px;
+}

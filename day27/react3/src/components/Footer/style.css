@@ -1,0 +1,17 @@
+
+.footer-wrapper{
+    background-color: black;
+}
+.footer {
+    color: white;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+}
+.footer-links{
+    display: flex;
+    gap: 20px;
+}
