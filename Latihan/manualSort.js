@@ -26,7 +26,7 @@ const ManualSort = (arr) => {
   // Buat dua array kosong untuk menyimpan elemen yang lebih kecil dan lebih besar dari pivot.
   const lesser = [];
   const greater = [];
-
+  
   // Iterasi melalui array, mulai dari indeks 1 karena pivot sudah dipilih.
   for (let i = 1; i < arr.length; i++) {
     if (arr[i] < pivot) {
@@ -35,12 +35,10 @@ const ManualSort = (arr) => {
       greater.push(arr[i]);
     }
   }
-  console.log("lesser " + lesser);
-  console.log("greater " + greater);
 
   // Panggil rekursif fungsi ManualSort pada daftar lesser dan greater,
   // dan gabungkan pivot di tengahnya.
-  return [...ManualSort(lesser), pivot, ...ManualSort(greater)];
+  return [ ...ManualSort(lesser),  pivot, ...ManualSort(greater) ];
 }
 
 console.log(ManualSort([1, 3, 340, 54, 12, 35]))

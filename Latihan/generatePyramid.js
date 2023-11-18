@@ -18,15 +18,18 @@
 
 // jawaban
 const generatePyramid = (n) => {
-    // write your code here
-   for (let i = 0; i < n; i++) {
-    let output = '';
-    for (let j = 0; j <= i; j++) {
-        output += j + 1 + ' ';
+   
+    for (let i = 1; i <= n; i++) {
+      // Membuat variabel row untuk menyimpan pola baris
+      let row = '';
+      // Loop untuk setiap kolom dari 1 hingga i
+      for (let j = 1; j <= i; j++) {
+        // Menambahkan nilai j dan spasi ke dalam variabel row
+        row += j + ' ';
+      }
+      // Mencetak baris yang telah dibuat ke konsol
+      console.log(row);
     }
-    console.log(output);
-    
-   }
-}
-
-generatePyramid(5);
+  }
+  
+  generatePyramid(5);

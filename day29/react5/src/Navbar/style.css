@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+}
+.navbar-wrapper {
+  background-color: antiquewhite;
+}
+.navbar {
+  padding: 10px 50px 10px 50px;
+  color: white;
+  display: flex;
+  justify-content: right;
+  text-decoration: none;
+  align-items: center;
+  gap: 50px;
+}

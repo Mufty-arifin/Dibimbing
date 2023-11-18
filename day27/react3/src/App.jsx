@@ -50,8 +50,11 @@ function App() {
       <button onClick= {handleSearch}>Cari</button>
       <div>
         <h1>Daftar Mobil</h1>
-        {filteredCars.map((item, index) => (
-            <p key={index}>{item.name}</p>
+        {filteredCars.map((item) => (
+            <p key={item.name}>{item.name}</p>
+          ))}
+          {filteredCars.map((item) => (
+            <p key={item.avatar}>{item.avatar}</p>
           ))}
       </div>
       <Footer/>
