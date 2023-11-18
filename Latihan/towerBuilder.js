@@ -21,31 +21,28 @@ contoh tower 3 lantai
 */
 
 function towerBuilder(n) {
-   // Initialize an empty array to store each floor of the tower
-   const tower = [];
+  const tower = [];
 
-   // Outer loop for each floor of the tower
-   for (let i = 0; i < n; i++) {
-       // Inner loop for spaces before the stars on each floor
-       let spaces = '';
-       for (let j = 0; j < n - i - 1; j++) {
-           spaces += ' ';
-       }
+  for (let i = 0; i < n; i++) {
+    // Perulangan untuk spasi pada setiap lantai
+    let spaces = "";
+    for (let j = 0; j < n - i - 1; j++) {
+      spaces += " ";
+    }
 
-       // Inner loop for the stars on each floor
-       let stars = '';
-       for (let k = 0; k < 2 * i + 1; k++) {
-           stars += '*';
-     
-        }
+      // Perulangan untuk bintang pada setiap lantai
+    let stars = "";
+    for (let k = 0; k < 2 * i + 1; k++) {
+      stars += "*";
+    }
 
-       // Combine spaces and stars for each floor and push it to the tower array
-       tower.push(spaces + stars);
-   }
+     // Gabungkan spasi dan bintang untuk setiap lantai dan masukkan ke dalam array menara
+    tower.push(spaces + stars);
+  }
 
-   // Return the tower as a string with each floor separated by a newline
-   return tower.join('\n');
-
+  // Kembalikan menara sebagai string dengan setiap lantai dipisahkan oleh baris baru
+  return tower.join("\n");
 }
 
-console.log(towerBuilder(3))
+console.log(towerBuilder(6));
+console.log(towerBuilder(3));
