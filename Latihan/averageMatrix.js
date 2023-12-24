@@ -10,7 +10,7 @@ Expected Output:
 // Jawaban:
 function averageMatrix(matrix) {
     //write your code here
-    let total = 0;
+    let total = 1;
     let count = 0;
 
     for (let i = 0; i < matrix.length; i++) {
